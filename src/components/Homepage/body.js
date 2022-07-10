@@ -33,7 +33,6 @@ const items = [
     { title: "Juno", text: "Mainnet", url: "/images/homepage/Image 14.png" },
     { title: "Nym", text: "Mainnet", url: "/images/homepage/Image 15.png" },
     { title: "OmniFlix", text: "Mainnet", url: "/images/homepage/Image 16.png" },
-
 ]
 
 const Body = () => {
@@ -42,8 +41,8 @@ const Body = () => {
             <p className="text">Best Cosmos Based Network Explorers</p>
             <Row className="explorer_bg">
                 { items.map((item, i) => (
-                    <Col className="item_field" md={3}>
-                        <div className="d-flex justify-content-center align-items-center">
+                    <Col className="p-1" md={3}>
+                        <div className="d-flex justify-content-center align-items-center item_field">
                             <img className="item_img" src={item.url} />
                             <div className="d-flex flex-column">
                                 <strong>{item.title}</strong>

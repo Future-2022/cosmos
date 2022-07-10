@@ -1,5 +1,7 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+
+import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap'
 
 import assets from './assets/assets.png'
 import blocks from './assets/blocks.png'
@@ -15,6 +17,7 @@ import searchIcon from './assets/search.png'
 import validators from './assets/validators.png'
 import timerIcon from './assets/timer-icon.png'
 import settingIcon from './assets/setting-icon.png'
+
 
 const icons = [
   dashboard,
@@ -37,14 +40,50 @@ const menus = [
 const Header = () => {
   return (
     <div className="header d-flex">
-      <div className="header-brand">
+      <Navbar bg="" expand="lg" style={{ width: '100%' }} variant="dark">
+        <Container>
+          <Navbar.Brand href="#home" className="cosmos-text cosmos-text-primary" style={{ fontSize: '24px', color: 'white !important' }}>COSMOS</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto w-100">
+              {menus.map((item, index) => (
+                <div className="header-menu-item d-flex" key={index}>
+                  <Nav.Link href="#">
+                    <Link to={item} style={{ display: 'flex' }}>
+                      <img className="header-menu-item-img" src={icons[index]} alt="" />
+                      <span className="cosmos-text">{item}</span>
+                    </Link >
+                  </Nav.Link>
+                </div>
+              ))}
+              <div className="header-menu-item d-flex w-100" style={{ justifyContent: 'right' }} >
+                <div className="header-toolbar d-flex g-12">
+                  <div className="header-toolbar-button p-15">
+                    <img src={searchIcon} alt="" />
+                  </div>
+                  <div className="header-toolbar-button p-15">
+                    <img src={notificationIcon} alt="" />
+                  </div>
+                  <div className="header-toolbar-button">
+                    <img src={profileIcon} alt="" />
+                  </div>
+                  <div className="p-12">
+                    <img src={menuIcon} alt="" />
+                  </div>
+                </div>
+              </div>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+      {/* <div className="header-brand">
         <h3 className="cosmos-text cosmos-text-brand">cosmos</h3>
       </div>
       <div className="header-menu d-flex">
         {menus.map((item, index) => (
           <div className="header-menu-item d-flex" key={index}>
             <Link to={item} ><img className="header-menu-item-img" src={icons[index]} alt="" />
-            <span className="cosmos-text">{item}</span>
+              <span className="cosmos-text">{item}</span>
             </Link >
           </div>
         ))}
@@ -62,7 +101,7 @@ const Header = () => {
         <div className="p-12">
           <img src={menuIcon} alt="" />
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }
@@ -92,7 +131,7 @@ const StatusBar = () => {
                 <img className="status-bar-icon-img" src={timerIcon} alt="" />
               </div>
               <p className="cosmos-text cosmos-text-info my-10">Latest Block: </p>
-              <div className="d-flex g-6">
+              <div className="d-flex g-6" style={{ overflow: 'hidden' }}>
                 <p className="cosmos-text cosmos-text-secondary bg-info status-bar-info my-10">
                   15
                 </p>

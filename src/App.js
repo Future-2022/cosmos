@@ -6,7 +6,6 @@ import {
   Route, 
  } from "react-router-dom";
 
-import './App.css';
 import Homepage from './components/Homepage';
 import Validators from "./components/Validators";
 import Blocks from './components/Blocks';
@@ -19,8 +18,13 @@ import Dashboard from './components/Dashboard';
 import Proposals from './components/proposals';
 import Assets from './components/Assets';
 import Parameters from './components/Parameters';
+import AccountDetail from './components/Account/detail';
+import ValidatorDetail from './components/ValidatorDetail';
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
+
+import './App.css';
+import './responsive.style.css'
 
 const App = () => {
 
@@ -42,6 +46,8 @@ const App = () => {
           <Route path="/proposals" element={ <Proposals />} />
           <Route path="/assets" element={ <Assets />} />
           <Route path="/parameters" element={ <Parameters />} />
+          <Route path="/accountDetail" element={ <AccountDetail />} />
+          <Route path="/validatorDetail" element={ <ValidatorDetail />} />
         </Routes>
         <Footer />
       </BrowserRouter>

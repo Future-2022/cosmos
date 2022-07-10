@@ -44,7 +44,6 @@
     width: 50%;
 } */
 table {
-    table-layout: fixed;
     width: 100%!important;
     border:1px solid;
     margin-top:20px;
@@ -71,7 +70,7 @@ td th {
     font-size: 20px;
 }
 .validator-card {
-    width: 405px;
+    width: 380px;
     height: 211px;
     padding: 30px 45px;
     border-radius: 4px;

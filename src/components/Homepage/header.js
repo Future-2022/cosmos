@@ -7,7 +7,7 @@ const Header = () => {
                     <p className="header_text">Try the best Cosmos-based network explorers Nodes. Guru. Delivered.</p>
                     <button className="account_btn">Create an Account</button>
                 </div>
-                <div className="">
+                <div className="d-flex justify-content-center align-items-center">
                     <img className="header_img" src="/images/homepage/dashboardPhone.png" />
                 </div>
             </div>

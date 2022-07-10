@@ -2,6 +2,8 @@
 }
 .homepage .header_background {
     background-image: url("./dashboardHeader.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 .home_header {
     margin-top: 50px;
@@ -53,6 +55,7 @@
 .item_field {
     border: 1px solid #C9C9C9;
     padding: 20px 30px;
+    height: 110px;
 }
 
 @media screen and (max-width: 1100px) {
@@ -84,6 +87,9 @@
         font-weight: bold;
         color: white;
     }
+    .home_header {
+        margin-top: 20px;
+    }
     .homepage .header_text {
         font-size: 18px;
         margin-top: 8px;
@@ -95,7 +101,7 @@
         font-size: 16px;
         color: white;
         background-color : #027AFF;
-        margin-top: 15px;
+        margin-top: 0px;
         border: none;
         outline: none;
         border-radius: 5px;
@@ -104,6 +110,17 @@
 
 @media screen and (max-width: 570px) {
     .header_img {
-        display: none;
+        width: 80%;
+        height: 80%;
+    }
+    .homepage .header_text {
+        font-size: 15px;
+        margin-top: 5px;
+        color: white;
+    }
+    .account_btn {
+        width: 160px;
+        height: 35px;   
+        margin-top: 0px;
     }
 }

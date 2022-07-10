@@ -29,7 +29,7 @@ function Lists() {
             <p>Channel 1/1</p>
           </div>
         </div>
-        <table class="table">
+        <table className="table table-hover">
           <thead>
             <tr className="table-stripe">
               <th className="thead-onlytext" scope="col">#</th>

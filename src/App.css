@@ -46,9 +46,7 @@ height: min-content;
   width: 27px;
   height: 27px;
 }
-.header-toolbar {
 
-}
 .header-toolbar-button {
   width: 50px;
   height: 50px;
@@ -60,17 +58,13 @@ height: min-content;
   padding: 14px 160px;
   background: white;
 }
-.status-bar-content-item {
 
-}
 .status-bar-icon {
   padding: 13px;
   box-shadow: 1px 3px 3px #bfb4b4;
   border-radius: 22px;
 }
-.status-bar-icon-img {
 
-}
 .status-bar-info {
   border-radius: 12px;
   padding: 0px 6px;
@@ -108,18 +102,6 @@ height: min-content;
 }
 p.cosmos-text {
   font-size: 16px;
-}
-
-.cosmos-text-bold {
-
-}
-
-.cosmos-text-brand {
-
-}
-
-.cosmos-text-primary {
-
 }
 
 .cosmos-text-secondary {
@@ -188,4 +170,44 @@ p.cosmos-text {
 .table-border {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+}
+
+.text-circle {
+  background-color: #FEF8E4;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  padding-top: 5px;
+}
+
+.text-success {
+  background-color: whitesmoke;
+  border-radius: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color:green;
+}
+
+.text-canceled {
+  background-color: whitesmoke;
+  border-radius: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color:red;
+}
+
+.text-type {
+  background-color: #FEF8E4;
+  border-radius: 20px;
+  padding: 6px 7px;
+}
+
+.text-blue {
+  color:blue;
+}
+
+.bg-grey {
+  background-color: #D7EFFB;
+  border-radius: 12px;
+  margin-bottom: 10px;
 }
