@@ -1,62 +1,102 @@
-import { Table } from "react-bootstrap"
+import React from "react";
+import { Link } from "react-router-dom";
 
-const tableItems = [
-    { no: "1", height: "344,818,012", hash: "", proposer: "Mandragora", txs: "15", time: "34" },
-    { no: "2", height: "344,818,012", hash: "A09F4AF9B45CFE31C01FB0FD44741063E166B7FDB", proposer: "Mandragora", txs: "15", time: "34" },
-    { no: "3", height: "344,818,012", hash: "A09F4AF9B45CFE31C01FB0FD44741063E166B7FDB", proposer: "Mandragora", txs: "15", time: "34" },
-    { no: "4", height: "344,818,012", hash: "A09F4AF9B45CFE31C01FB0FD44741063E166B7FDB", proposer: "Mandragora", txs: "15", time: "34" },
-    { no: "5", height: "344,818,012", hash: "A09F4AF9B45CFE31C01FB0FD44741063E166B7FDB", proposer: "Mandragora", txs: "15", time: "34" },
-    { no: "6", height: "344,818,012", hash: "A09F4AF9B45CFE31C01FB0FD44741063E166B7FDB", proposer: "Mandragora", txs: "15", time: "34" },
-    { no: "7", height: "344,818,012", hash: "A09F4AF9B45CFE31C01FB0FD44741063E166B7FDB", proposer: "Mandragora", txs: "15", time: "34" },
-    { no: "8", height: "344,818,012", hash: "A09F4AF9B45CFE31C01FB0FD44741063E166B7FDB", proposer: "Mandragora", txs: "15", time: "34" },
-    { no: "9", height: "344,818,012", hash: "A09F4AF9B45CFE31C01FB0FD44741063E166B7FDB", proposer: "Mandragora", txs: "15", time: "34" },
-    { no: "10", height: "344,818,012", hash: "A09F4AF9B45CFE31C01FB0FD44741063E166B7FDB", proposer: "Mandragora", txs: "15", time: "34" },
-]
+const Block = () => {
 
-const Blocks = () => {
     return (
-        <div className="container block mt-5">
-            <strong className="block_title">BLOCKS</strong>
-            <div className="block_body">
-                <div className="d-flex justify-content-between align-items-center mb-1 p-2">
-                    <div className="d-flex justify-content-between align-items-center">
-                        <img className="validators_icon" src='/images/validators/1.png' />
-                        <strong style={{marginLeft: 30}}>Blocks</strong>
-                    </div>
-                    <div className="d-flex justify-content-between align-items-center">
-                        <button className="block_btn">Blocks</button>
-                        <button className="transaction_btn">Transactions</button>
+        <div className="container">
+            <p className='blockP pt-4'><img src='../../../block.png' /><span className="ms-2">BLOCKS</span></p>
+            <div className="block bg-white pt-3 table-responsive" style = {{ borderRadius:'14px'}}>
+                <div className="row">
+                    <div className="d-flex justify-content-between block-header">
+                        <p className= "mt-2" style={{ width:'100px', marginLeft:'20px'}}><b>Blocks</b></p>
+                        <div className="text-center">
+                            <Link to="/blocks"><button className="btn btn-secondary">Blocks</button></Link>
+                            <Link to="/transaction"><button className="btn btn-light">Transactions</button></Link>          
+                        </div>
                     </div>
                 </div>
-                <Table striped hover>
-                    <thead className="table_head">
+                <table className="table table-hover text-center">
+                    <thead className='table-dark'>
                         <tr>
-                            <th>No.</th>
+                            <th>No</th>
                             <th>Height</th>
                             <th>Block Hash</th>
-                            <th>Proposer</th>
+                            <th>Porposer</th>
                             <th>Txs</th>
                             <th>Time</th>
                         </tr>
                     </thead>
                     <tbody>
-                        { tableItems.map((tableItem, i) => (
-                            <tr key={i}>
-                                <td>
-                                    <div className="rank_field">{tableItem.no} </div>
-                                </td>
-                                <td>{tableItem.height}</td>
-                                <td>{tableItem.hash}</td>
-                                <td>{tableItem.proposer}</td>
-                                <td>{tableItem.txs}</td>
-                                <td>{tableItem.time}</td>
-                            </tr>
-                        ))}
+                        <tr>
+                            <td>1</td>
+                            <td>344,818,012</td>
+                            <td>A09F4AF9B45CFE31C01FB0FD44741063E166B7FDB</td>
+                            <td>Mandragora</td>
+                            <td>15</td>
+                            <td>34s ago</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>344,818,012</td>
+                            <td>A09F4AF9B45CFE31C01FB0FD44741063E166B7FDB</td>
+                            <td>Mandragora</td>
+                            <td>15</td>
+                            <td>34s ago</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>344,818,012</td>
+                            <td>A09F4AF9B45CFE31C01FB0FD44741063E166B7FDB</td>
+                            <td>Mandragora</td>
+                            <td>15</td>
+                            <td>34s ago</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>344,818,012</td>
+                            <td>A09F4AF9B45CFE31C01FB0FD44741063E166B7FDB</td>
+                            <td>Mandragora</td>
+                            <td>15</td>
+                            <td>34s ago</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>344,818,012</td>
+                            <td>A09F4AF9B45CFE31C01FB0FD44741063E166B7FDB</td>
+                            <td>Mandragora</td>
+                            <td>15</td>
+                            <td>34s ago</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>344,818,012</td>
+                            <td>A09F4AF9B45CFE31C01FB0FD44741063E166B7FDB</td>
+                            <td>Mandragora</td>
+                            <td>15</td>
+                            <td>34s ago</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>344,818,012</td>
+                            <td>A09F4AF9B45CFE31C01FB0FD44741063E166B7FDB</td>
+                            <td>Mandragora</td>
+                            <td>15</td>
+                            <td>34s ago</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>344,818,012</td>
+                            <td>A09F4AF9B45CFE31C01FB0FD44741063E166B7FDB</td>
+                            <td>Mandragora</td>
+                            <td>15</td>
+                            <td>34s ago</td>
+                        </tr>
                     </tbody>
-                </Table>
+                </table>
             </div>
         </div>
     )
 }
 
-export default Blocks
+export default Block;

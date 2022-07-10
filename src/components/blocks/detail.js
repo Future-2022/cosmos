@@ -2,15 +2,15 @@ import React from "react";
 
 const Detail = () => {
     return (
-        <div className="background">
+        <div className="container">
             <p className='blockP pt-4'><img src='../../../block.png' /><b>Details for Block #1853549</b></p>
             <div className="block bg-white container mb-5" style = {{ borderRadius:'14px', fontSize:'14px'}}>
                 <div className="row mt-0">
                     <div className="d-flex justify-content-between bg-dark" style = {{ borderTopLeftRadius:'14px', borderTopRightRadius:'14px'}}>
-                        <p className= "mt-2" style={{ width:'100px', marginLeft:'20px',color:'white'}}>Header</p>
+                        <p className= "mt-3 ms-3" style={{ width:'100px', color:'white'}}><strong>Header</strong></p>
                         <div className="d-flex justify-content-end my-2">
-                            <button className="mr-1 btn btn-primary">Summary</button>
-                            <button className="btn btn-basic ml-4" style={{color:'white', borderColor:'white'}}>Json</button>            
+                            <button className="me-2 btn btn-primary">Summary</button>
+                            <button className="btn btn-basic ms-3" style={{color:'white', borderColor:'white'}}>Json</button>            
                         </div>
                     </div>
                 </div>
@@ -35,7 +35,7 @@ const Detail = () => {
                 <div className='row px-5'>
                     <label className='col-md-3'>Blocl Hash</label>
                     <label className='col-md-1'>:</label>
-                    <label className='col-md-7'>A09F4AF9B45CFE31C01FB0FD44741063E166B7FDB</label>
+                    <label className='col-md-7'><p className="text-ellips">A09F4AF9B45CFE31C01FB0FD44741063E166B7FDB</p></label>
                 </div>
                 <hr />
                 <div className='row px-5'>
@@ -68,8 +68,8 @@ const Detail = () => {
                     <label className='col-md-7'>bitszn</label>
                 </div>
             </div>
-            <p className='blockP pt-4'><img src='../../../block.png' /><b>Transactions</b></p>
-            <div className="block bg-white container pt-3" style = {{ borderRadius:'14px'}}>
+            <p className='blockP'><img src='../../../block.png' /><b>Transactions</b></p>
+            <div className="block bg-white pt-3 table-responsive" style = {{ borderRadius:'14px'}}>
                 
                 <div className="row">
                     <div className="d-flex justify-content-between">
@@ -77,7 +77,7 @@ const Detail = () => {
                     </div>
                      
                 </div>
-                <table className="table table-striped table-hover text-center">
+                <table className="table table-hover text-center">
                     <thead className='table-dark'>
                         <tr>
                             <th>No</th>
@@ -173,11 +173,12 @@ const Detail = () => {
                         </tr>
                     </tbody>
                 </table>
-                <button className='btn btn-primary'>1</button>
-                <button className='btn btn-light'>1</button>
-                <button className='btn btn-light'>1</button>
+                <div className="table-footer" style={{ background: '#fff' }}>
+                    <button className="btn m-2 btn-primary">1</button>
+                    <button className="btn m-2">2</button>
+                    <button className="btn m-2">3</button>
+                </div>
             </div>
-            
         </div>
     )
 }

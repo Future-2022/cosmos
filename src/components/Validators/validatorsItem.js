@@ -12,11 +12,11 @@ const ValidatorsItem = () => {
         <div className="validatorsItem">
             <div className="d-flex align-items-center mb-3 mt-5">
                 <img className="validators_icon" src='/images/validators/1.png' />
-                <strong>VALIDATORS</strong>
+                <strong className="validators_title">VALIDATORS</strong>
             </div>
             <Row>
                 { items.map((item, i) => (
-                    <Col md={3} key={i}>
+                    <Col className="mb-2" md={3} key={i}>
                         <Card className="validators_card">
                             <Card.Header>{item.text}</Card.Header>
                             <Card.Body>

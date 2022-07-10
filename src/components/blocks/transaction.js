@@ -1,21 +1,22 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Transaction = () => {
     return (
-        <div className="background">
-            <p className='blockP pt-4'><img src='../../../block.png' />BLOCKS</p>
-            <div className="block bg-white container pt-3" style = {{ borderRadius:'14px'}}>
+        <div className="container">
+            <p className='blockP pt-4'><img src='../../../block.png' /><span className="ms-2">TRANSACTION DETAIL</span></p>
+            <div className="block bg-white pt-3 table-responsive" style = {{ borderRadius:'14px'}}>
                 <div className="row">
-                    <div className="d-flex justify-content-between">
+                    <div className="d-flex justify-content-between block-header">
                         <p className= "mt-2" style={{ width:'100px', marginLeft:'20px'}}><b>Blocks</b></p>
-                        <div className="d-flex justify-content-end">
-                            <button className="mr-1 btn btn-light">Blocks</button>
-                            <button className="btn btn-secondary ml-4">Transactions</button>            
+                        <div className="text-center">
+                            <Link to="/blocks"><button className="btn btn-light">Blocks</button></Link>
+                            <Link to="/transaction"><button className="btn btn-secondary">Transactions</button></Link>   
                         </div>
                     </div>
                      
                 </div>
-                <table className="table table-striped table-hover">
+                <table className="table table-hover text-center">
                     <thead className='table-dark'>
                         <tr>
                             <th>No</th>
@@ -112,7 +113,6 @@ const Transaction = () => {
                     </tbody>
                 </table>
             </div>
-            
         </div>
     )
 }

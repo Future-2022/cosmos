@@ -4,6 +4,12 @@
 .validators_card {
     background-color: #EBFDEF;
 }
+.validators_title {
+    margin-left: 25px;
+}
+.th_img {
+    margin-left: 5px;
+}
 .validators_icon_field {
     position: relative;
     align-items: center;
@@ -29,6 +35,7 @@
     margin-right: 15px;
 }
 .card_body {
+    width: 100%;
     height: 70px;
 }
 .validators_body {
@@ -59,6 +66,7 @@
 .validatorsRank .dflex {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 13px;
 }
 .validators_search {
     outline: none;
@@ -66,6 +74,7 @@
     padding: 5px 10px;
     border-radius: 5px;
     margin-right: 10px;
+    width: 150px;
 }
 .validators_active {
     width: 80px;
@@ -134,3 +143,22 @@
     background-color: white;
     border-radius: 10px;
 }
+.validators_bg .table_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.table_title_btnField {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (max-width: 470px) {
+    .validators_bg .table_title {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+} 
