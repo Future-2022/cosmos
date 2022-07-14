@@ -126,7 +126,7 @@ const Dashboard = () => {
     });
     return (
         <div>
-            <div className='dashboard'>
+            <div className='dashboard container pt-4'>
                 <div className='d-flex justify-content-center flex-wrap'>
                     <div className='w-50 min-420'>
                         <div>
@@ -151,12 +151,10 @@ const Dashboard = () => {
                         <p className='ps-3 pt-1'>Validators Graph</p>
                     </div>
                 </div>
-                <div className='pt-5'>
-                    {/* <div> */}
-                        
-                        <div className='d-flex justify-content-center flex-wrap'>                            
+                <div className='pt-5'>                        
+                        <div className='d-flex justify-content-between flex-wrap'>                            
                             <div id="chart" className=' mt-3 w-60 min-450'>
-                                <div className='mx-4'>
+                                <div>
                                     <img src={Icon} className='icon' />
                                     <span className='ps-3'>Umee</span>
                                 </div>
@@ -172,10 +170,10 @@ const Dashboard = () => {
                                             <div className='chart-button'>volume</div>
                                         </div>
                                     </div>
-                                    <Chart options={option2} series={series2} type="area" height={250} width='100%' />
+                                    <Chart options={option2} series={series2} type="area" height={260} width='100%' />
                                 </div>
                             </div>
-                            <div className='credit-card mt-3 w-20 min-420 mx-4 mt-5'>
+                            <div className='credit-card mt-3 w-20 ms-1 mt-5'>
                                 <div className='d-flex justify-content-between'>
                                     <div><img src={Ellipse} width={30} height={30} className="me-3" /><span className='strong fs-15'>Umee</span></div>
                                     <div><div className='ticket'><span className='text-grey'><img src={Time} width={20} height={20} className="me-2"/>Block Time:</span> 6,001 ms</div></div>
@@ -200,11 +198,11 @@ const Dashboard = () => {
                 </div>
             
                 <div className='d-flex justify-content-center pt-4 flex-wrap'>
-                    <div className='w-50 min-420'>
+                    <div className='w-49 min-420'>
                         <div>
                             <img src={Icon} className='icon'/> Transaction Graph
                         </div>
-                        <div id="chart" className='chart-card mt-3 mx-1'>
+                        <div id="chart" className='chart-card mt-3'>
                             <div className='d-flex justify-content-between'>
                                 <div className='ps-2'>Transaction</div>
                                 <div className='d-flex'>
@@ -223,11 +221,12 @@ const Dashboard = () => {
                             <Chart options={option3} series={series3} type="area" height={350} width='100%'/>
                         </div>
                     </div>
-                    <div className='w-50 min-420'>
+                    <div className='min-20'></div>
+                    <div className='w-49 min-420'>
                         <div>
                             <img src={Icon} className='icon'/> Price Graph
                         </div>
-                        <div id="chart" className='chart-card mt-3 mx-1'>
+                        <div id="chart" className='chart-card mt-3'>
                             <div className='d-flex justify-content-between'>
                                 <div className='ps-2'>Price Table</div>
                                 <div className='d-flex'>
@@ -262,7 +261,7 @@ const Dashboard = () => {
                             <img src={Icon} className='icon' />
                             <span className='ps-3'>VALIDATORS</span>
                         </div>
-                        <div className='d-flex justify-content-center flex-wrap'>
+                        <div className='d-flex justify-content-between flex-wrap'>
                             <div className='validator-card mt-3 color-1 mx-2'>
                                 <div className='d-flex justify-content-between'>
                                     <div><h5>Height</h5></div>
@@ -319,11 +318,11 @@ const Dashboard = () => {
                 </div>
             </div>
             <div>
-                <img src={Sad} className='w-100' />
+                <img src={Sad} className='w-100 pt-4' />
             </div>
-            <div className='dashboard'>
+            <div className='dashboard container'>
                 <div className='d-flex justify-content-center flex-wrap'>
-                    <div className='w-50 min-420'>
+                    <div className='w-50 min-420 pt-4'>
                         <div className='mx-4'>
                             <img src={Icon} className='icon' />
                             <span className='ps-3'>Umee</span>
@@ -381,7 +380,7 @@ const Dashboard = () => {
                             </table>
                         </div>
                     </div>
-                    <div className='w-50 min-420'>
+                    <div className='w-50 min-420 pt-4'>
                         <div className='mx-4'>
                             <img src={Icon} className='icon' />
                             <span className='ps-3'>Transactions</span>
